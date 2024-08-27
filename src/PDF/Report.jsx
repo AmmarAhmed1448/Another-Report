@@ -22,14 +22,14 @@ const Report = () => {
         <Document producer='Interactive Technologies Gateway' creator='Progression International' author='Progression International'>
             <Page style={styles.body} size="A4" orientation='portrait'>
 
-
+            <View style={[{border: 0.5, height: "98%", padding: 3}]}>
                 {/* <View style={styles.pageBorder}> */}
 
                 {/* Invoice box */}
 
-                <View style={[styles.borderBlack, styles.flex, { height: "10%", }]}>
-                    <Text style={[styles.text6]}>Austria</Text>
-                    <Text style={[{ fontSize: 10 }]}>INVOICE</Text>
+                <View style={[styles.borderBlack, styles.flex, { height: "10%", paddingVertical: 5, paddingHorizontal: 10}]}>
+                    <Text style={[styles.text8, {alignSelf: "center"}]}>Austria</Text>
+                    <Text style={[styles.text10,styles.bold,{ fontSize: 10, marginHorizontal: "auto", alignSelf: "flex-end" }]}>INVOICE</Text>
                 </View>
 
 
@@ -246,7 +246,7 @@ const Report = () => {
 
 
                 {/* Table */}
-                <View style={[styles.borderbottomblack, styles.flex,]}>
+                <View style={[ styles.flex, {borderBottom: 0.5}]}>
 
                     <View style={{ width: "30%" }}>
 
@@ -293,13 +293,15 @@ const Report = () => {
                     </View>
                 </View>
 
+                </View>
+
                 {/* Footer */}
                 {/* <View style={[styles.flex, {justifyContent: "space-between", paddingHorizontal: 50, position: "absolute", bottom: 30, right: 50}]} fixed > */}
                 <View style={[styles.bordertopblack, { width: 100, textAlign: "center", position: "absolute", bottom: 30, left: 50 }]} fixed>
                     <Text style={[styles.text8]} fixed>President</Text>
                 </View>
                 <Text style={[styles.text8, { position: "absolute", bottom: 30, right: 50 }]} render={({ pageNumber }) => (`Page #: ${pageNumber}`)} fixed />
-                {/* </View> */}
+                
 
 
 
@@ -311,171 +313,192 @@ const Report = () => {
 
 
             <Page style={styles.body} size="A4" orientation='portrait'>
+            {/* <View style={[{border: 0.5, height: "98%", padding: 3}]}> */}
+    
+<View style={[styles.borderBlack, styles.flex, { alignItems: "flex-end", textAlign: "center", padding: 5, width: "97%", alignSelf: "center" }]} fixed>
 
-                <View style={[styles.borderBlack, styles.flex, { alignItems: "flex-end", textAlign: "center", padding: 5 }]} fixed>
+<View style={{ width: "30%" }}>
 
-                    <View style={{ width: "30%" }}>
+    <View>
+        <Text style={[styles.text7, { textAlign: "left" }]}>Production and Quantity Information</Text>
+    </View>
 
-                        <View>
-                            <Text style={[styles.text7, { textAlign: "left" }]}>Production and Quantity Information</Text>
-                        </View>
+    <View style={[styles.flex, { paddingVertical: 5 }]}>
+        <View style={{ width: "20%" }}>
+            <Text style={[styles.text7]}>P.O #</Text>
+        </View>
+        <View style={{ width: "20%" }}>
+            <Text style={[styles.text7]}>Style #</Text>
+        </View>
+        <View style={{ width: "60%" }}>
+            <Text style={[styles.text7]}>Item</Text>
+        </View>
+    </View>
+</View>
 
-                        <View style={[styles.flex, { paddingVertical: 5 }]}>
-                            <View style={{ width: "20%" }}>
-                                <Text style={[styles.text7]}>P.O #</Text>
-                            </View>
-                            <View style={{ width: "20%" }}>
-                                <Text style={[styles.text7]}>Style #</Text>
-                            </View>
-                            <View style={{ width: "60%" }}>
-                                <Text style={[styles.text7]}>Item</Text>
-                            </View>
-                        </View>
-                    </View>
+<View style={{ width: "5%", paddingHorizontal: 5 }}>
+    <Text style={[styles.text7]}>Size Range</Text>
+</View>
 
-                    <View style={{ width: "5%", paddingHorizontal: 5 }}>
-                        <Text style={[styles.text7]}>Size Range</Text>
-                    </View>
-
-                    <View style={{ width: "10%", paddingHorizontal: 5 }}>
-                        <Text style={[styles.text7]}>LDP Unit</Text>
-                    </View>
-                    <View style={{ width: "5%", paddingHorizontal: 5 }}>
-                        <Text style={[styles.text7]}>Shipped Qty in Pcs</Text>
-                    </View>
-                    <View style={{ width: "10%", paddingHorizontal: 5 }}>
-                        <Text style={[styles.text7]}>SHPD # of Cartons</Text>
-                    </View>
-                    <View style={{ width: "10%", paddingHorizontal: 5 }}>
-                        <Text style={[styles.text7]}>LDP Value</Text>
-                    </View>
-                    <View style={{ width: "10%", paddingHorizontal: 5 }}>
-                        <Text style={[styles.text7]}>Deduction Amount (if Any)</Text>
-                    </View>
-                    <View style={{ width: "10%", paddingHorizontal: 5 }}>
-                        <Text style={[styles.text7]}>Adjusted Amount (if Any)</Text>
-                    </View>
-                    <View style={{ width: "10%", paddingHorizontal: 5 }}>
-                        <Text style={[styles.text7]}>Invoice Amount Due</Text>
-                    </View>
-                </View>
-
-
-
-                <View style={[styles.borderleftblack, styles.borderrightblack, styles.borderbottomblack, styles.flex, { flexDirection: "column", alignItems: "flex-end" }]}>
-                    <View style={[styles.flex, { width: "70%", paddingVertical: 5 }]}>
-                        <View style={{ width: "20%" }}>
-                            <Text style={[styles.text8]}>Shipment Total:-</Text>
-                        </View>
-                        <View style={{ width: "30%" }}>
-                            <Text style={[styles.text8]}>24,28,43,42,54,333 Pcs</Text>
-                        </View>
-                        <View style={{ width: "30%" }}>
-                            <Text style={[styles.text8]}>24,28,43,42,54,333 Ctns</Text>
-                        </View>
-                        <View style={{ width: "30%" }}>
-                            <Text style={[styles.text8]}>24,28,43,42,54,333</Text>
-                        </View>
-                    </View>
+<View style={{ width: "10%", paddingHorizontal: 5 }}>
+    <Text style={[styles.text7]}>LDP Unit</Text>
+</View>
+<View style={{ width: "5%", paddingHorizontal: 5 }}>
+    <Text style={[styles.text7]}>Shipped Qty in Pcs</Text>
+</View>
+<View style={{ width: "10%", paddingHorizontal: 5 }}>
+    <Text style={[styles.text7]}>SHPD # of Cartons</Text>
+</View>
+<View style={{ width: "10%", paddingHorizontal: 5 }}>
+    <Text style={[styles.text7]}>LDP Value</Text>
+</View>
+<View style={{ width: "10%", paddingHorizontal: 5 }}>
+    <Text style={[styles.text7]}>Deduction Amount (if Any)</Text>
+</View>
+<View style={{ width: "10%", paddingHorizontal: 5 }}>
+    <Text style={[styles.text7]}>Adjusted Amount (if Any)</Text>
+</View>
+<View style={{ width: "10%", paddingHorizontal: 5 }}>
+    <Text style={[styles.text7]}>Invoice Amount Due</Text>
+</View>
+</View>
 
 
 
-                    <View style={[styles.flex, { width: "70%", paddingVertical: 5 }]}>
-
-                        <View style={{ width: "20%" }}>
-
-                        </View>
-                        <View style={{ width: "30%" }}>
-                            <Text style={[styles.text8]}>0</Text>
-                        </View>
-                        <View style={{ width: "30%" }}>
-                        </View>
-                        <View style={{ width: "30%" }}>
-                            <Text style={[styles.text8]}>0</Text>
-                        </View>
-                    </View>
-
-
-
-                    <View style={[styles.flex, { width: "70%", paddingVertical: 5 }]}>
-
-                        <View style={{ width: "20%" }}>
-
-                        </View>
-                        <View style={{ width: "30%" }}>
-                            <Text style={[styles.text8]}>0</Text>
-                        </View>
-                        <View style={{ width: "30%" }}>
-                        </View>
-                        <View style={{ width: "30%" }}>
-                            <Text style={[styles.text8]}>0</Text>
-                        </View>
-                    </View>
-
-
-                    <View style={[styles.flex, { width: "70%", paddingVertical: 5 }]}>
-
-                        <View style={{ width: "20%" }}>
-
-                        </View>
-                        <View style={{ width: "30%" }}>
-                            <Text style={[styles.text8]}>0</Text>
-                        </View>
-                        <View style={{ width: "30%" }}>
-                        </View>
-                        <View style={{ width: "30%" }}>
-                            <Text style={[styles.text8]}>0</Text>
-                        </View>
-                    </View>
-                </View>
+<View style={[styles.flex, { flexDirection: "column", alignItems: "flex-end", border: 0.5 }]}>
+<View style={[styles.flex, { width: "70%", paddingVertical: 5 }]}>
+    <View style={{ width: "20%" }}>
+        <Text style={[styles.text8]}>Shipment Total:-</Text>
+    </View>
+    <View style={{ width: "30%" }}>
+        <Text style={[styles.text8]}>24,28,43,42,54,333 Pcs</Text>
+    </View>
+    <View style={{ width: "30%" }}>
+        <Text style={[styles.text8]}>24,28,43,42,54,333 Ctns</Text>
+    </View>
+    <View style={{ width: "30%" }}>
+        <Text style={[styles.text8]}>24,28,43,42,54,333</Text>
+    </View>
+</View>
 
 
 
+<View style={[styles.flex, { width: "70%", paddingVertical: 5 }]}>
 
-                <View style={[styles.borderleftblack, styles.borderrightblack, styles.borderbottomblack]}>
+    <View style={{ width: "20%" }}>
 
-                    <View style={[styles.borderBlack, styles.flex, { justifyContent: "space-around", paddingVertical: 10 }]}>
-                        <Text style={[styles.text8, styles.bold]}>Net Recievable</Text>
-                        <Text style={[styles.text8]}>9823748247843</Text>
-
-                    </View>
-
-
-                    <View style={[styles.borderBlack, { paddingVertical: 10, width: "80%" }]}>
-                        <Text style={[styles.text8, styles.bold]}>Remarks</Text>
-                    </View>
-
-
-
-                    <View>
-                        <Text>Invoice Amount in Words : </Text>
-                        <View style={[styles.borderBlack, { paddingVertical: 10, width: "80%" }]}>
-                            <Text style={[styles.text8, styles.bold]}>THREE MILLION EIGHT HUNDRED TEN THOUSAND THIRTY-FIVE</Text>
-                        </View>
-                    </View>
-
-
-                </View>
+    </View>
+    <View style={{ width: "30%" }}>
+        <Text style={[styles.text8]}>0</Text>
+    </View>
+    <View style={{ width: "30%" }}>
+    </View>
+    <View style={{ width: "30%" }}>
+        <Text style={[styles.text8]}>0</Text>
+    </View>
+</View>
 
 
 
-                <View style={[styles.flexbox, {height: "10%"}]}>
-                <View style={[styles.borderBlack, {width: "30%"}]}>
-                    <Text style={[styles.text8, styles.bold]}>For Wire Transfer Benefciary </Text>
-                    <Text style={[styles.text8]}>Austria</Text>
-                </View>
-               
-               
-               
-               
-                <View style={[styles.borderBlack, {width: "30%"}]}>
-                    <Text style={[styles.text8, styles.bold]}>Benefciary's Bank :</Text>
-                    <Text style={[styles.text8]}>N / A</Text>
-                    <Text style={[styles.text8]}>Account No. : </Text>
-                    <Text style={[styles.text8]}>Routing No. : </Text>
-                </View>
-                </View>
+<View style={[styles.flex, { width: "70%", paddingVertical: 5 }]}>
+
+    <View style={{ width: "20%" }}>
+
+    </View>
+    <View style={{ width: "30%" }}>
+        <Text style={[styles.text8]}>0</Text>
+    </View>
+    <View style={{ width: "30%" }}>
+    </View>
+    <View style={{ width: "30%" }}>
+        <Text style={[styles.text8]}>0</Text>
+    </View>
+</View>
+
+
+<View style={[styles.flex, { width: "70%", paddingVertical: 5 }]}>
+
+    <View style={{ width: "20%" }}>
+
+    </View>
+    <View style={{ width: "30%" }}>
+        <Text style={[styles.text8]}>0</Text>
+    </View>
+    <View style={{ width: "30%" }}>
+    </View>
+    <View style={{ width: "30%" }}>
+        <Text style={[styles.text8]}>0</Text>
+    </View>
+</View>
+</View>
+
+
+
+
+<View style={[{paddingHorizontal: 10, paddingVertical: 5, border: 0.5 }]}>
+
+<View style={[styles.flex, {justifyContent: "flex-end"}]}>
+<View style={[styles.borderBlack, styles.flex, { justifyContent: "space-around", paddingVertical: 5, width: "40%", marginTop: 15, marginBottom: 5 }]}>
+    <Text style={[styles.text8, styles.bold]}>Net Recievable: </Text>
+    <Text style={[styles.text8]}>9823748247843</Text>
+</View>
+</View>
+
+
+<View style={[styles.borderBlack, { marginVertical: 5, paddingVertical: 10, paddingHorizontal: 5, width: "80%" }]}>
+    <Text style={[styles.text8, styles.bold]}>Remarks</Text>
+</View>
+
+
+
+<View style={[styles.flex, {width: "80%", marginVertical: 5}]}>
+    <View style={{paddingVertical: 5, marginLeft: 20,  width: "30%"}}>
+        <Text style={[styles.text8, styles.bold]}>Invoice Amount in Words : </Text>
+    </View>
+    <View style={[styles.borderBlack, {paddingVertical: 5, paddingHorizontal: 5, width: "70%" }]}>
+        <Text style={[styles.text8]}>THREE MILLION EIGHT HUNDRED TEN THOUSAND THIRTY-FIVE</Text>
+    </View>
+</View>
+
+
+</View>
+
+
+
+<View style={[styles.flexbox, { margin: 5}]}>
+<View style={[styles.borderBlack, {width: "30%", paddingVertical: 10, paddingHorizontal: 5}]}>
+    <View>
+    <Text style={[styles.text8, styles.bold]}>For Wire Transfer Benefciary </Text>
+    </View>
+    <View style={{paddingTop: 30}}>
+    <Text style={[styles.text8]}>Austria</Text>
+    </View>
+</View>
+
+
+
+
+<View style={[styles.borderBlack, {width: "30%", paddingHorizontal: 5, paddingTop: 10, paddingBottom: 20}]}>
+<View>
+    <Text style={[styles.text8, styles.bold]}>Benefciary's Bank :</Text>
+    </View>
+    <View style={{paddingVertical: 5}}>
+    <Text style={[styles.text8]}>N / A</Text>
+    </View>
+    <View>
+    <Text style={[styles.text8]}>Account No. : </Text>
+    </View>
+    <View style={{paddingVertical: 5}}>
+    <Text style={[styles.text8]}>Routing No. : </Text>
+    </View>
+</View>
+</View>
+{/* </View> */}
             </Page>
+
+
+
+
         </Document>
 
     );
