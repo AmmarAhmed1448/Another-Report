@@ -31,14 +31,14 @@ const MilestoneReport = () => {
                     </View>
 
                     {/* Line below Logo */}
-                    <View style={styles.flexbox}>
+                    <View style={[styles.flexbox, {marginVertical: 10}]}>
                         <Text style={[styles.text10, styles.bold, styles.underline]}>Milestone</Text>
                         <Text style={styles.text7}>Print Date: 28-Aug-2024</Text>
                     </View>
 
 
 
-                    <View style={styles.flex}>
+                    <View style={[styles.flex, {marginHorizontal: 5}]}>
 
                         <View style={[styles.borderBlack, { width: "50%", borderRadius: "25%", paddingHorizontal: 10, paddingVertical: 10 }]}>
                             <View style={styles.flex}>
@@ -87,7 +87,7 @@ const MilestoneReport = () => {
                     {/* The table */}
                     <View style={{ marginVertical: 10 }}>
 
-                        <View style={[styles.flex, styles.borderBlack, { height: 20, alignItems: "flex-end", paddingHorizontal: 5 }]} fixed>
+                        <View style={[styles.flex, styles.borderBlack, { height: 20, alignItems: "center", paddingHorizontal: 5 }]} fixed>
                             <Text style={[styles.text7, styles.bold, { width: "25%" }]}>Process</Text>
                             <Text style={[styles.text7, styles.bold, { width: "15%" }]}>Target Date</Text>
                             <Text style={[styles.text7, styles.bold, { width: "15%" }]}>Estimated Date</Text>
