@@ -197,6 +197,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontFamily: "Roboto-Bold",
   },
+  
+  underline: {
+    fontStyle: "underline",
+    fontFamily: "Roboto-Bold",
+  },
+  
   text6: {
     fontSize: 6,
     lineHeight: 1.2,

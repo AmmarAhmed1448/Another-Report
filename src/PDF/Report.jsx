@@ -19,6 +19,7 @@ import styles from "./styles";
 const Report = () => {
 
     return (
+        
         <Document producer='Interactive Technologies Gateway' creator='Progression International' author='Progression International'>
             <Page style={styles.body} size="A4" orientation='portrait'>
 
@@ -497,6 +498,7 @@ const Report = () => {
             </Page>
 
 
+       
 
 
         </Document>
