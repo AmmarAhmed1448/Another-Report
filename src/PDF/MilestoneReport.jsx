@@ -51,7 +51,7 @@ const MilestoneReport = () => {
                                 <Text style={[styles.text8, { width: "60%" }]}></Text>
                             </View>
 
-                            <View>
+                            <View style={styles.flex}>
                                 <Text style={[styles.text8, { width: "40%" }]}>Shipment Date</Text>
                                 <Text style={[styles.text8, { width: "60%" }]}></Text>
                             </View>
