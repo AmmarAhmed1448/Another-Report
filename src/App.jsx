@@ -3,6 +3,7 @@ import { PDFViewer } from '@react-pdf/renderer';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MilestoneReport from "./PDF/MilestoneReport";
 import MilestoneHistoryReport from "./PDF/MilestoneHistoryReport";
+import PricingAndDevelopment from "./PDF/PricingAndDevevelopments";
 
 
 function App() {
@@ -35,6 +36,14 @@ function App() {
             </PDFViewer>
           }
           />
+         
+         
+          <Route path="/PricingAndDevelopment" element={
+            <PDFViewer width="100%" height="800px">
+              <PricingAndDevelopment />
+            </PDFViewer>
+          }
+          />
           
 
         </Routes>
@@ -42,5 +51,6 @@ function App() {
     </>
   )
 }
+
 
 export default App
